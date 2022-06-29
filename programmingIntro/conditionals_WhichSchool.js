@@ -3,7 +3,7 @@ const whichSchool  = function (age) {
     return 'Elementary School';
   else if (age >= 13 && age <= 18)
     return 'Secondary School';
-return 'Lighthouse Labs';
+  return 'Lighthouse Labs';
 }
 
 console.log("I am 35. Which school should I go to?");
