@@ -8,7 +8,7 @@ const loopyLighthouse = function (range, multiples, words) {
       output += words[1];
     if (!output)
       output = i;
-    console.log(output);
+    console.log(output ? output : i);
   }
 }
 
