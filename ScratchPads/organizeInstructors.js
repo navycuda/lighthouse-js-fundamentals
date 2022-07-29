@@ -1,10 +1,10 @@
 const organizeInstructors = function(instructors) {
   // Put your solution here
-  courses = {};
+  const courses = {};
 
-  for (let i = 0; i < instructors.length; i++){
+  for (let i = 0; i < instructors.length; i++) {
     const bob = instructors[i];
-    if(!courses.hasOwnProperty(bob.course))
+    if (!courses.hasOwnProperty(bob.course))
       courses[bob.course] = [];
     courses[bob.course].push(bob.name);
   }

@@ -2,15 +2,13 @@ const sumLargestNumbers = function(data) {
   // Put your solution here
   let max = 0;
   let almostMax = 0;
-  for (let n = 0; n < data.length; n++){
+  for (let n = 0; n < data.length; n++) {
     let num = data[n];
-    if (num > max)
-    {
+    if (num > max) {
       almostMax = max;
       max = num;
-    }
-    else if (num > almostMax)
-      almostMax = num
+    } else if (num > almostMax)
+      almostMax = num;
   }
   return max + almostMax;
 };

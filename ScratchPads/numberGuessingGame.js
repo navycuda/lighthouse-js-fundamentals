@@ -4,12 +4,12 @@ let prompt = require("prompt-sync")();
 const SetUpGame = () => {
   console.log(`Number Guesser v1.1 Professional`);
   console.log(`type '.exit' to exit early`);
-  while (true){
+  while (true) {
     const scalar = playerInputNumber("Set Range 0 to ");
     const randomNumber = Math.floor(Math.random() * scalar);
     return { setPoint: randomNumber, max: scalar};
   }
-}
+};
 const playGame = (randomNumber) => {
   let attempts = 1;
   let previousGuess = 0;
@@ -17,12 +17,11 @@ const playGame = (randomNumber) => {
     const guess = playerInputNumber("Guess a number: ");
     if (guess === randomNumber.setPoint)
       return attempts;
-    else if (guess === previousGuess){
+    else if (guess === previousGuess) {
       console.log("Already Guessed!");
       attempts--;
       continue;
-    }
-    else if (guess > randomNumber.max)
+    } else if (guess > randomNumber.max)
       console.log("Above the max point! Try Again!");
     else if (guess > randomNumber.setPoint)
       console.log("Too High!");
@@ -31,7 +30,7 @@ const playGame = (randomNumber) => {
     previousGuess = guess;
     attempts++;
   }
-}
+};
 const playerInputNumber = (promptText) => {
   while (true) {
     const guess = prompt(promptText);
@@ -42,7 +41,7 @@ const playerInputNumber = (promptText) => {
     else
       console.log("Not a number! Try Again!");
   }
-}
+};
 
 // Setup the game
 const randomNumber = SetUpGame();

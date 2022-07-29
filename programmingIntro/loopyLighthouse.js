@@ -1,5 +1,4 @@
-for (let i = 100; i <= 200; i++)
-{
+for (let i = 100; i <= 200; i++) {
   let output = "";
   if (i % 3 === 0)
     output += "Loopy";

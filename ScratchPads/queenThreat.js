@@ -1,16 +1,15 @@
-const generateBoard = function(whiteQueen, blackQueen){
-  let board = []
-
-  for (let r = 0; r < 8; r++){
+const generateBoard = function(whiteQueen, blackQueen) {
+  let board = [];
+  for (let r = 0; r < 8; r++) {
     board.push([]);
-    for (let c = 0; c < 8; c++){
+    for (let c = 0; c < 8; c++) {
       board[r].push(coordsMatch([r,c],[whiteQueen, blackQueen]) ? 1 : 0);
     }
   }
   return board;
-}
-const coordsMatch = function (coords, players) {
-  for (let p = 0; p < players.length; p++){
+};
+const coordsMatch = function(coords, players) {
+  for (let p = 0; p < players.length; p++) {
     const x = coords[0];
     const y = coords[1];
     const pX = players[p][0];
@@ -19,7 +18,7 @@ const coordsMatch = function (coords, players) {
       return true;
   }
   return false;
-}
+};
 const queenThreat = function(board) {
   // Setup the players
   let p = [];
@@ -39,7 +38,7 @@ const queenThreat = function(board) {
   else if ((x1 - x2) + (y1 - y2) === 0)
     return true;
   return false;
-}
+};
 
 let whiteQueen = [0, 5];
 let blackQueen = [5, 0];

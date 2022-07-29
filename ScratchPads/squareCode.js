@@ -9,28 +9,28 @@ const squareCode = function(message) {
   // encode the message
   return encodeMessage(square);
 };
-const encodeMessage = function (square) {
+const encodeMessage = function(square) {
   let result = "";
   const columns = square[0].length;
   const rows = square.length;
 
-  for (let c = 0; c < columns; c++){
-    for (let r = 0; r < rows; r++){
+  for (let c = 0; c < columns; c++) {
+    for (let r = 0; r < rows; r++) {
       if (c >= square[r].length)
         continue;
       result += square[r][c];
     }
-    if (c != columns - 1)
+    if (c !== columns - 1)
       result += ' ';
   }
   return result;
-}
-const createSquare = function (text, columns){
+};
+const createSquare = function(text, columns) {
   let squareArray = [];
   let loopValue = "";
 
-  for (let t = 0; t < text.length; t++){
-    if (t !== 0 && t % columns === 0){
+  for (let t = 0; t < text.length; t++) {
+    if (t !== 0 && t % columns === 0) {
       squareArray.push(loopValue);
       loopValue = "";
     }
@@ -38,14 +38,14 @@ const createSquare = function (text, columns){
     if (t === text.length - 1)
       squareArray.push(loopValue);
   }
-  return squareArray
-}
-const removeSpaces = function (text){
+  return squareArray;
+};
+const removeSpaces = function(text) {
   let result = "";
   for (let i = 0; i < text.length; i++)
     result += text[i] === ' ' ? '' : text[i];
   return result;
-}
+};
 
 
 console.log(squareCode("chill out"));

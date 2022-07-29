@@ -1,6 +1,6 @@
 const instructorWithLongestName = function(instructors) {
   // Put your solution here
-  return instructors.reduce((a,c) => 
+  return instructors.reduce((a,c) =>
     c.name.length > a.name.length ? c : a
   );
 };

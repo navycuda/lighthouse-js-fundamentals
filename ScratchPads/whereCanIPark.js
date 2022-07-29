@@ -1,4 +1,4 @@
-const whereCanIPark = function (spots, vehicle) {
+const whereCanIPark = function(spots, vehicle) {
   // Code here!
   
   const abbv = "RSM";
@@ -6,7 +6,7 @@ const whereCanIPark = function (spots, vehicle) {
   // use the first letter of the string to identify vehicle
   const v = vehicle[0].toUpperCase();
   // add each of the open spot flags to result
-  for (let a = 0; a < 3; a++){
+  for (let a = 0; a < 3; a++) {
     result += abbv[a];
     if (v === abbv[a])
       break;
@@ -54,4 +54,4 @@ console.log(whereCanIPark(
     ['S', 'r', 'S', 'M', 'm', 'S']
   ],
   'motorcycle'
-))
+));

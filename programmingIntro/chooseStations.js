@@ -4,7 +4,7 @@ const chooseStations = function(stations) {
     if (s[1] >= 20 && (s[2] === 'school' || s[2] === 'community centre'))
       result.push(s[0]);
   return result;
-}
+};
 
 
 const stations = [

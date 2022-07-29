@@ -5,7 +5,7 @@ const range = function(start, end, step) {
   const validStep = step !== undefined && step > 0;
 
   // If valid, process data
-  if (validStart && validEnd && validStep){
+  if (validStart && validEnd && validStep) {
     let result = [ start ];
     let value = start;
 
@@ -19,7 +19,7 @@ const range = function(start, end, step) {
     return result;
   }
   return [];
-}
+};
 
 console.log(range(0, 10, 2));
 console.log(range(10, 30, 5));

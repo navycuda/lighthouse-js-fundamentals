@@ -4,7 +4,7 @@ const multiplicationTable = function(maxValue) {
   if (maxValue === 1)
     return "1\n";
   for (let r = 1; r <= maxValue; r++)
-    for (let c = 1; c <= maxValue; c++){
+    for (let c = 1; c <= maxValue; c++) {
       if (c === 1)
         result += c;
       else if (c > 1 && c < maxValue)

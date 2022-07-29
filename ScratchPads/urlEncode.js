@@ -1,8 +1,8 @@
 const urlEncode = function(text) {
   // Put your solution here
-  let output = ""
+  let output = "";
   for (let t = 0; t < text.length; t++)
-    output += text[t] === ' ' ? '%20' : text[t]
+    output += text[t] === ' ' ? '%20' : text[t];
   return output;
 };
 

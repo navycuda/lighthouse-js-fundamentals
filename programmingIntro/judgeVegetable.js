@@ -1,12 +1,12 @@
-const judgeVegetable = function (veggies, judgedOn){
-
-  return veggies.reduce((acc, cur, ind, arr) =>{
-    if (judgedOn === 'redness')
+const judgeVegetable = function(veggies, judgedOn) {
+  return veggies.reduce((acc, cur) =>{
+    if (judgedOn === 'redness') {
       return acc = acc.redness > cur.redness ? acc : cur;
-    else
+    } else {
       return acc = acc.plumpness > cur.plumpness ? acc : cur;
+    }
   }, {}).submitter;
-}
+};
 
 const vegetables = [
   {
@@ -29,8 +29,8 @@ const vegetables = [
     redness: 11,
     plumpness: 1
   }
-]
+];
 
-const metric = 'plumpness'
+const metric = 'plumpness';
 
 console.log(judgeVegetable(vegetables, metric));

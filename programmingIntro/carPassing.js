@@ -1,7 +1,7 @@
-const carPassing = function (cars, speed) {
-  cars.push({ time: Date.now(), speed: speed })
+const carPassing = function(cars, speed) {
+  cars.push({ time: Date.now(), speed: speed });
   return cars;
-}
+};
 
 const cars = [
   {
@@ -16,9 +16,9 @@ const cars = [
     time: 1568331115463,
     speed: 35
   }
-]
+];
 
-const speed = 38
+const speed = 38;
 
 console.log(carPassing(cars, speed));
 

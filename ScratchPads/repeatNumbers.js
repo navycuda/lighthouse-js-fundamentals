@@ -1,8 +1,7 @@
 const repeatNumbers = function(data) {
   // Put your solution here
   let result = "";
-  for (let d = 0; d < data.length; d++)
-  {
+  for (let d = 0; d < data.length; d++) {
     for (let n = 0; n < data[d][1]; n++)
       result += data[d][0];
     if (data.length > 0 && d < (data.length - 1))

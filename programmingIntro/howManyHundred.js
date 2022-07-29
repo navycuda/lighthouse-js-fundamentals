@@ -1,6 +1,6 @@
-const howManyHundreds = function (n) {
+const howManyHundreds = function(n) {
   return Math.floor(n / 100);
-}
+};
 
 console.log(howManyHundreds(1000), "=?", 10);
 console.log(howManyHundreds(894), "=?", 8);
